@@ -1,0 +1,23 @@
+Package: cumtd
+Type: Package
+Title: R interface to Champaign–Urbana Mass Transit District Web API
+Version: 0.1.0
+Authors@R: c(
+    person("James Joseph", "Balamuta", 
+           email = "balamut2@illinois.edu", 
+           role = c("aut", "cre", "cph"), 
+           comment = c(ORCID = "0000-0003-2826-8458")),
+    person("Champaign-Urbana Mass Transit District", "(CUMTD)", 
+           email = "developer@cumtd.com", 
+           role = c("cph"))
+    )
+Description: Provides access to the realtime Web API run by
+    Champaign–Urbana Mass Transit District ('CUMTD').
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+    jsonlite,
+    httr

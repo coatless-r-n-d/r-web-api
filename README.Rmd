@@ -1,0 +1,99 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+## Retrieving Data from a Custom Web API  
+
+[![Travis-CI Build Status](https://travis-ci.org/r-pkg-examples/r-web-api.svg?branch=master)](https://travis-ci.org/r-pkg-examples/r-web-api)
+
+The `cumtd` _R_ package provides an example of implementing and using a 
+Web API. In particular, the package is a case study in retrieving data from the
+[Champaign-Urbana Mass Transit District ('CUMTD')](https://developer.cumtd.com/)
+Web API, which provides realtime information for buses. Writing a custom wrapper
+to the API was necessary since there is not a realtime [General Transit Feed Specification (GTFS)](http://code.google.com/transit/spec/transit_feed_specification.html)
+available via [GTFS Realtime](https://developers.google.com/transit/gtfs-realtime/).
+Thus, for those wanting to know if their bus will arrive on time, one must look
+elsewhere.
+
+As a follow-up, the package is used in 
+[`r-shinydashboard`](https://github.com/r-pkg-examples/r-shinydashboard) example
+to illustrate how a real-time API can be used with 
+[`shinydashboard`](https://rstudio.github.io/shinydashboard/index.html).
+
+### Installation
+
+To install the `cumtd` package, use:
+
+```r
+if(!requireNamespace("devtools")) install.packages("devtools")
+devtools::install_github("r-pkg-examples/r-web-api")
+```
+
+To access its contents, load it into _R_ with:
+
+```r
+library("cumtd")
+```
+
+### Endpoints
+
+We have support presently for:
+
+```{r, echo = FALSE}
+# Must be in the environment... 
+library("cumtd")
+# Dynamically retrieve package functions
+funcs = ls("package:cumtd")
+funcs = matrix(funcs, nrow = length(funcs))
+colnames(funcs) = c("Implemented Functions")
+knitr::kable(funcs)
+# Shows parameter call
+# lsf.str("package:ghapi3")
+```
+
+End points to be added (PRs appreciated!):
+
+```{r, echo = FALSE}
+ep = data.frame(Endpoints = c("GetCalendarDatesByDate", "GetCalendarDatesByService",
+                         "GetNews", 
+                         "GetReroutes", "GetReroutesByRoute",
+                         "GetRoute", "GetRoutesByStop",
+                         "GetStop", "GetStopsByLatLon", "GetStopsBySearch",
+                         "GetStopTimesByTrip", "GetStopTimesByStop",
+                         "GetPlannedTripsByLatLon", "GetPlannedTripsByStops",
+                         "GetTrip", "GetTripsByBlock", "GetTripsByRoute",
+                         "GetVehicle", "GetVehiclesByRoute",
+                         "GetLastFeedUpdate"))
+
+ep$`End Point Documentation` = paste0("[", ep$Endpoints,"]",
+                "(https://developer.cumtd.com/documentation/v2.2/method/", tolower(ep$Endpoints), ")")
+
+knitr::kable(ep[, -1, drop = FALSE])
+```
+
+
+### Implementation Details
+
+When trying to import data into _R_ from a Web API, the preferred approach
+is to use [`httr`](https://cran.r-project.org/package=httr) or [`curl`](https://cran.r-project.org/package=curl). Using either of these
+packages, one can form HTTP requests to send to the Web API and receive
+HTTP responses from it that contain the data. Inside the response, there is
+a body portion that contains the desired data and needs to be converted into an
+_R_ data structure.
+
+
+
+### License
+
+GPL (\>= 2)
