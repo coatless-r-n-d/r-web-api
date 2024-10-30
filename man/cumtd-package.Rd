@@ -3,17 +3,22 @@
 \docType{package}
 \name{cumtd-package}
 \alias{cumtd-package}
-\alias{_PACKAGE}
 \title{cumtd: R interface to Champaign–Urbana Mass Transit District Web API}
 \description{
-Provides access to the realtime Web API run by
-    Champaign–Urbana Mass Transit District ('CUMTD').
+Provides access to the realtime Web API run by Champaign–Urbana Mass Transit District ('CUMTD').
 }
 \details{
 Access data from CUMTD's API
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://rd.thecoatlessprofessor.com/r-web-api/}
+}
+
+}
 \author{
-\strong{Maintainer}: James Joseph Balamuta \email{balamut2@illinois.edu} (0000-0003-2826-8458) [copyright holder]
+\strong{Maintainer}: James Joseph Balamuta \email{balamut2@illinois.edu} (\href{https://orcid.org/0000-0003-2826-8458}{ORCID}) [copyright holder]
 
 Other contributors:
 \itemize{

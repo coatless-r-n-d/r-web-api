@@ -15,8 +15,10 @@ knitr::opts_chunk$set(
 
 ## Retrieving Data from a Custom Web API  
 
-[![Travis-CI Build Status](https://travis-ci.org/r-pkg-examples/r-web-api.svg?branch=master)](https://travis-ci.org/r-pkg-examples/r-web-api)
-
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/coatless-r-n-d/r-web-api/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-r-n-d/r-web-api/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+  
 The `cumtd` _R_ package provides an example of implementing and using a 
 Web API. In particular, the package is a case study in retrieving data from the
 [Champaign-Urbana Mass Transit District ('CUMTD')](https://developer.cumtd.com/)
@@ -36,8 +38,8 @@ to illustrate how a real-time API can be used with
 To install the `cumtd` package, use:
 
 ```r
-if(!requireNamespace("devtools")) install.packages("devtools")
-devtools::install_github("r-pkg-examples/r-web-api")
+if(!requireNamespace("remotes")) install.packages("remotes")
+remotes::install_github("coatless-r-n-d/r-web-api")
 ```
 
 To access its contents, load it into _R_ with:
@@ -91,7 +93,6 @@ packages, one can form HTTP requests to send to the Web API and receive
 HTTP responses from it that contain the data. Inside the response, there is
 a body portion that contains the desired data and needs to be converted into an
 _R_ data structure.
-
 
 
 ### License

@@ -17,7 +17,8 @@ License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.3.2
 Imports: 
     jsonlite,
     httr
+URL: https://rd.thecoatlessprofessor.com/r-web-api/

@@ -7,7 +7,7 @@
 classify_departure_status(departures_info)
 }
 \arguments{
-\item{departures_info}{Results returned from \code{\link[cumtd:get_departures_by_stop]{cumtd::get_departures_by_stop()}}.}
+\item{departures_info}{Results returned from \code{\link[=get_departures_by_stop]{get_departures_by_stop()}}.}
 }
 \value{
 An augmented \code{data.frame} that includes:

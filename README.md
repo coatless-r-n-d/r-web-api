@@ -3,8 +3,10 @@
 
 ## Retrieving Data from a Custom Web API
 
-[![Travis-CI Build
-Status](https://travis-ci.org/r-pkg-examples/r-web-api.svg?branch=master)](https://travis-ci.org/r-pkg-examples/r-web-api)
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/coatless-r-n-d/r-web-api/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-r-n-d/r-web-api/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 The `cumtd` *R* package provides an example of implementing and using a
 Web API. In particular, the package is a case study in retrieving data
@@ -29,8 +31,8 @@ example to illustrate how a real-time API can be used with
 To install the `cumtd` package, use:
 
 ``` r
-if(!requireNamespace("devtools")) install.packages("devtools")
-devtools::install_github("r-pkg-examples/r-web-api")
+if(!requireNamespace("remotes")) install.packages("remotes")
+remotes::install_github("coatless-r-n-d/r-web-api")
 ```
 
 To access its contents, load it into *R* with:
@@ -43,47 +45,46 @@ library("cumtd")
 
 We have support presently for:
 
-| Implemented Functions             |
-| :-------------------------------- |
-| classify\_departure\_status       |
-| convert\_response                 |
-| cumtd                             |
-| cumtd\_check\_key                 |
-| cumtd\_set\_key                   |
-| cumtd\_show\_key                  |
-| get\_all\_routes                  |
-| get\_all\_stops                   |
-| get\_all\_vehicles                |
-| get\_api\_usage                   |
-| get\_departures\_by\_stop         |
-| get\_route\_shape                 |
-| get\_route\_shape\_between\_stops |
+| Implemented Functions         |
+|:------------------------------|
+| classify_departure_status     |
+| convert_response              |
+| cumtd                         |
+| cumtd_check_key               |
+| cumtd_set_key                 |
+| cumtd_show_key                |
+| get_all_routes                |
+| get_all_stops                 |
+| get_all_vehicles              |
+| get_api_usage                 |
+| get_departures_by_stop        |
+| get_route_shape               |
+| get_route_shape_between_stops |
 
-End points to be added (PRs
-appreciated\!):
+End points to be added (PRs appreciated!):
 
-| End Point Documentation                                                                                      |
-| :----------------------------------------------------------------------------------------------------------- |
-| [GetCalendarDatesByDate](https://developer.cumtd.com/documentation/v2.2/method/getcalendardatesbydate)       |
+| End Point Documentation |
+|:---|
+| [GetCalendarDatesByDate](https://developer.cumtd.com/documentation/v2.2/method/getcalendardatesbydate) |
 | [GetCalendarDatesByService](https://developer.cumtd.com/documentation/v2.2/method/getcalendardatesbyservice) |
-| [GetNews](https://developer.cumtd.com/documentation/v2.2/method/getnews)                                     |
-| [GetReroutes](https://developer.cumtd.com/documentation/v2.2/method/getreroutes)                             |
-| [GetReroutesByRoute](https://developer.cumtd.com/documentation/v2.2/method/getreroutesbyroute)               |
-| [GetRoute](https://developer.cumtd.com/documentation/v2.2/method/getroute)                                   |
-| [GetRoutesByStop](https://developer.cumtd.com/documentation/v2.2/method/getroutesbystop)                     |
-| [GetStop](https://developer.cumtd.com/documentation/v2.2/method/getstop)                                     |
-| [GetStopsByLatLon](https://developer.cumtd.com/documentation/v2.2/method/getstopsbylatlon)                   |
-| [GetStopsBySearch](https://developer.cumtd.com/documentation/v2.2/method/getstopsbysearch)                   |
-| [GetStopTimesByTrip](https://developer.cumtd.com/documentation/v2.2/method/getstoptimesbytrip)               |
-| [GetStopTimesByStop](https://developer.cumtd.com/documentation/v2.2/method/getstoptimesbystop)               |
-| [GetPlannedTripsByLatLon](https://developer.cumtd.com/documentation/v2.2/method/getplannedtripsbylatlon)     |
-| [GetPlannedTripsByStops](https://developer.cumtd.com/documentation/v2.2/method/getplannedtripsbystops)       |
-| [GetTrip](https://developer.cumtd.com/documentation/v2.2/method/gettrip)                                     |
-| [GetTripsByBlock](https://developer.cumtd.com/documentation/v2.2/method/gettripsbyblock)                     |
-| [GetTripsByRoute](https://developer.cumtd.com/documentation/v2.2/method/gettripsbyroute)                     |
-| [GetVehicle](https://developer.cumtd.com/documentation/v2.2/method/getvehicle)                               |
-| [GetVehiclesByRoute](https://developer.cumtd.com/documentation/v2.2/method/getvehiclesbyroute)               |
-| [GetLastFeedUpdate](https://developer.cumtd.com/documentation/v2.2/method/getlastfeedupdate)                 |
+| [GetNews](https://developer.cumtd.com/documentation/v2.2/method/getnews) |
+| [GetReroutes](https://developer.cumtd.com/documentation/v2.2/method/getreroutes) |
+| [GetReroutesByRoute](https://developer.cumtd.com/documentation/v2.2/method/getreroutesbyroute) |
+| [GetRoute](https://developer.cumtd.com/documentation/v2.2/method/getroute) |
+| [GetRoutesByStop](https://developer.cumtd.com/documentation/v2.2/method/getroutesbystop) |
+| [GetStop](https://developer.cumtd.com/documentation/v2.2/method/getstop) |
+| [GetStopsByLatLon](https://developer.cumtd.com/documentation/v2.2/method/getstopsbylatlon) |
+| [GetStopsBySearch](https://developer.cumtd.com/documentation/v2.2/method/getstopsbysearch) |
+| [GetStopTimesByTrip](https://developer.cumtd.com/documentation/v2.2/method/getstoptimesbytrip) |
+| [GetStopTimesByStop](https://developer.cumtd.com/documentation/v2.2/method/getstoptimesbystop) |
+| [GetPlannedTripsByLatLon](https://developer.cumtd.com/documentation/v2.2/method/getplannedtripsbylatlon) |
+| [GetPlannedTripsByStops](https://developer.cumtd.com/documentation/v2.2/method/getplannedtripsbystops) |
+| [GetTrip](https://developer.cumtd.com/documentation/v2.2/method/gettrip) |
+| [GetTripsByBlock](https://developer.cumtd.com/documentation/v2.2/method/gettripsbyblock) |
+| [GetTripsByRoute](https://developer.cumtd.com/documentation/v2.2/method/gettripsbyroute) |
+| [GetVehicle](https://developer.cumtd.com/documentation/v2.2/method/getvehicle) |
+| [GetVehiclesByRoute](https://developer.cumtd.com/documentation/v2.2/method/getvehiclesbyroute) |
+| [GetLastFeedUpdate](https://developer.cumtd.com/documentation/v2.2/method/getlastfeedupdate) |
 
 ### Implementation Details
 

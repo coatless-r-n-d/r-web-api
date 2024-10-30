@@ -4,8 +4,7 @@
 \alias{get_departures_by_stop}
 \title{Retrieve a List of CUMTD Bus Departures}
 \usage{
-get_departures_by_stop(stop_id, route_id = NULL, pt = NULL,
-  count = NULL)
+get_departures_by_stop(stop_id, route_id = NULL, pt = NULL, count = NULL)
 }
 \arguments{
 \item{stop_id}{(required) id of the stop (ex. IT:1 or IT)}

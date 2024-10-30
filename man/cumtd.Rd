@@ -4,8 +4,7 @@
 \alias{cumtd}
 \title{Construct and Call a "GET" Request to CUMTD API}
 \usage{
-cumtd(endpoint, ..., key = NULL, version = "v2.2", format = c("json",
-  "xml"))
+cumtd(endpoint, ..., key = NULL, version = "v2.2", format = c("json", "xml"))
 }
 \arguments{
 \item{endpoint}{Resource path}

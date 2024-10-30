@@ -4,8 +4,12 @@
 \alias{get_api_usage}
 \title{Retrieve API Usage for specific methods}
 \usage{
-get_api_usage(method = NULL, version = NULL, start_date = NULL,
-  end_date = NULL)
+get_api_usage(
+  method = NULL,
+  version = NULL,
+  start_date = NULL,
+  end_date = NULL
+)
 }
 \arguments{
 \item{method}{(optional) a single API method for which you want data
